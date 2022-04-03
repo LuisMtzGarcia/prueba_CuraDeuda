@@ -12,12 +12,10 @@ llamado "csvCombinado.csv" con el cual se podra trabajar.
 ### lectorCSV.py
 
 Abre el archivo "csvCombinado.csv" generado por el script anterior y (por el momento) 
-realiza las siguientes operaciones:
+realiza la siguiente operación:
 
-* Hace lectura de los estados en el archivo, limpia los nombres por medio de 
-unidecoder y genera una lista mostrando los estados que aparecen en el archivo.
-
-* Hace lectura de los Códigos Postales y los almacena en una lista.
+* Genera un arreglo bidimensional con el nombre de la colonia como key de tipo string 
+y como valor se crea una lista con los codigos postales relacionados con la colonia.
 
 # Instrucciones de uso.
 
