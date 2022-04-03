@@ -1,6 +1,6 @@
 import csv
 
-filename = "documentos/csvCombinado.csv"
+nombreArchivo = "documentos/csvCombinado.csv"
 """with open(filename, encoding='utf-8') as f:
     reader = csv.reader(f)
     header_row = next(reader)
@@ -18,9 +18,9 @@ filename = "documentos/csvCombinado.csv"
         if estado not in estados:
             estados.append(estado)"""
 
-file = open(filename, encoding='utf-8')
-reader = csv.reader(file)
-header_row = next(reader)
+archivo = open(nombreArchivo, encoding='utf-8')
+lector = csv.reader(archivo)
+header_row = next(lector)
 
 estados = []
 codigosPostales = []
