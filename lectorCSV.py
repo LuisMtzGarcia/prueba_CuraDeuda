@@ -23,6 +23,7 @@ col_CP = {}
 
 for fila in lector:
     colonia = fila[2]
+    colonia = unidecode.unidecode(colonia)
     
     if colonia not in col_CP:
         col_CP[colonia] = []
