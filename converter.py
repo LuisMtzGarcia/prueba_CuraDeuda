@@ -22,14 +22,24 @@ def combinarCSV(archivoIgnorar=None):
         # relevante, por lo que se elimina.
         todosNombres.remove(archivoIgnorar)
 
-    # Combina todos los archivos en una lista.
+    # Combina todos los archivos.
     csvCombinado = pd.concat([pd.read_csv(n) for n in todosNombres])
     
-    # Exporta a csv.
-    csvCombinado.to_csv("csvCombinado.csv", index=False, encoding='utf-8-sig')
+    nombreCSV = "csvCombinado.csv"
 
-nombreArchivo = 'CPdescarga.xls'
+    # Exporta a csv.
+    csvCombinado.to_csv(nombreCSV, index=False, encoding='utf-8-sig')
+
+    print(f"{nombreCSV} ha sido creado")
+
+# El nombre del archivo descargado en SEPOMEX es 'CPdescarga.xls', pero en 
+# recibo un input del usuario para que funcione con cualquier archivo de excel.
+
+print("Introduce el nombre del archivo a convertir en CSV: ")
+nombreArchivo = input()
 
 crearCSVs(nombreArchivo)
 
+# La primera hoja del archivo de excel de SEPOMEX es una nota con información
+# irrelevante.
 combinarCSV('Nota.csv')
