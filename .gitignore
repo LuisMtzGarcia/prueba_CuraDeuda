@@ -2,3 +2,9 @@ pt_env
 CPdescarga.txt
 CPdescarga.xls
 CPdescarga.xml
+CPdescarga.csv
+CPdescarga.xlsx
+Combine_CSV.py
+__pycache__/
+documentos/
+eliminarhoja.py
